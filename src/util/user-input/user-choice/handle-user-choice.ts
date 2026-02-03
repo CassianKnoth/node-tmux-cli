@@ -4,7 +4,7 @@ import { listChoiceLabels } from './list-choice-labels.js';
 import { getUserInput } from '../get-user-input.js';
 import { getParsedAvailableOptions } from './get-parsed-available-options.js';
 import { styleText } from 'node:util';
-import { handleWithConfirmation } from './handle-with-confirmation.js';
+import { handleWithConfirmation } from './handle-choice-with-confirmation.js';
 
 /**
  * Present the user with a set of choices and handle the input accordingly.

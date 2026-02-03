@@ -1,12 +1,13 @@
 import { styleText } from 'node:util';
-import { configuredSessions } from '../../../config.js';
 import { Context } from '../../../types/state.js';
 import { choices } from '../../user-input/user-choice/choices.js';
 import { getUserInput } from '../../user-input/get-user-input.js';
 import { hasTmuxSession } from '../../tmux/has-session.js';
 import { isTmuxAttached } from '../../tmux/is-attached.js';
 import { tmuxStartSession } from '../../tmux/start/start-session.js';
-import { handleWithConfirmation } from '../../user-input/user-choice/handle-with-confirmation.js';
+import { handleWithConfirmation } from '../../user-input/user-choice/handle-choice-with-confirmation.js';
+import { configuredSessions } from '../../../index.js';
+import { userConfirmation } from '../../user-input/user-confirmation.js';
 
 export const handleNoConfigState = async (
 	currentContext: Context,
@@ -36,9 +37,9 @@ export const handleNoConfigState = async (
 			styleText('red', `❌ "${userInput}" is not a valid configuration`),
 		);
 		console.log(
-			// double space due to emoji consisting of two characters
 			styleText(
 				'cyan',
+				// double space due to emoji consisting of two characters
 				`➡️  Check for typos, create it and then try again, or choose another`,
 			),
 		);
@@ -70,6 +71,12 @@ export const handleNoConfigState = async (
 	}
 
 	// - start
-	tmuxStartSession(sessionName);
-	return { sessionState: 'DETACHED_SESSION', sessionName: sessionName };
+	console.log(`Status: Session "${sessionName}" is inactive`);
+	const confirmed = await userConfirmation(`Start session "${sessionName}?"`);
+	if (confirmed) {
+		tmuxStartSession(sessionName);
+		return { sessionState: 'DETACHED_SESSION', sessionName: sessionName };
+	}
+
+	return currentContext;
 };

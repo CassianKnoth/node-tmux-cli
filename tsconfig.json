@@ -4,6 +4,7 @@
 		"rootDir": "./src",
 		"outDir": "./dist",
 		"module": "nodenext",
+		"resolveJsonModule": true,
 		"target": "esnext",
 		"lib": ["esnext"],
 		"types": ["node"],

@@ -2,7 +2,7 @@ import { execSync } from 'node:child_process';
 
 import { printLineSeparator } from '../../layout/line-separator.js';
 import { createWindow } from './create-window.js';
-import { configuredSessions } from '../../../config.js';
+import { configuredSessions } from '../../../index.js';
 
 export const tmuxStartSession = (sessionName: string) => {
 	const configuredWindows = configuredSessions[sessionName];

@@ -1,7 +1,7 @@
 import { execSync } from 'node:child_process';
 import { Pane } from '../../../types/config-types.js';
-import { shell } from '../../../config.js';
 import { formatCompoundPath } from '../../format-compound-path.js';
+import { confiuredShell } from '../../../index.js';
 
 export const createPane = (
 	pane: Pane,
@@ -25,7 +25,7 @@ export const createPane = (
 		console.log(`⏳ 🤖 Executing configured command in Pane "${paneName}"...`);
 		// replace double quotes because they can mess with shell execution
 		execSync(
-			`tmux send-keys -t ${newPaneIdentifier} "${shell} -c '${pane.command.replace(/"/g, '\\"')}; exec ${shell}'" C-m`,
+			`tmux send-keys -t ${newPaneIdentifier} "${confiuredShell} -c '${pane.command.replace(/"/g, '\\"')}; exec ${confiuredShell}'" C-m`,
 		);
 		execSync(`tmux send-keys -t ${newPaneIdentifier} Enter`);
 		console.log(`✅ Command executed in Pane "${paneName}"`);

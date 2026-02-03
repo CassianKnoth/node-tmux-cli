@@ -1,7 +1,7 @@
 import { InspectColor, styleText } from 'node:util';
-import { configuredSessions } from '../config.js';
-import { hasTmuxSession } from './tmux/has-session.js';
-import { isTmuxAttached } from './tmux/is-attached.js';
+import { configuredSessions } from '../../index.js';
+import { hasTmuxSession } from '../tmux/has-session.js';
+import { isTmuxAttached } from '../tmux/is-attached.js';
 
 export const listConfigurations = () => {
 	const configuredSessionNames = Object.keys(configuredSessions);

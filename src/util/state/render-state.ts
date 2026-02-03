@@ -1,6 +1,6 @@
 import { styleText } from 'node:util';
 import { Context } from '../../types/state.js';
-import { listConfigurations } from '../list-configuration.js';
+import { listConfigurations } from '../config/list-configuration.js';
 import { printLineSeparator } from '../layout/line-separator.js';
 
 export const renderState = async ({ sessionState, sessionName }: Context) => {
