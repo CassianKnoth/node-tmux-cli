@@ -1,4 +1,5 @@
 export type NodeTmuxConfig = {
+	// for schema generation
 	$schema?: string;
 	shell: Shell;
 	sessions: SessionConfigurations;

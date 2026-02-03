@@ -1,5 +1,5 @@
 import fs from 'fs';
-import schema from '../../schema/schema.json' with { type: 'json' };
+import schema from '../../config/schema/schema.json' with { type: 'json' };
 
 import type { Ajv as AjvClass } from 'ajv';
 import { createRequire } from 'node:module';

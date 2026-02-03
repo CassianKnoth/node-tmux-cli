@@ -1,0 +1,22 @@
+{
+	"$schema": "../schema/schema.json",
+	"shell": "bash",
+	"sessions": {
+		"mySession": [
+			{
+				"name": "myWindow",
+				"workspacePath": "/absolute/path/to/my-awesome-project",
+				"additionalPanes": [
+					{
+						"name": "server"
+					},
+					{
+						"name": "watcher",
+						"subPath": "src",
+						"command": "echo HELLO FROM WATCHER"
+					}
+				]
+			}
+		]
+	}
+}

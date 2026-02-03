@@ -1,0 +1,18 @@
+{
+	"$schema": "../schema/schema.json",
+	"shell": "zsh",
+	"sessions": {
+		"defaultSession": [
+			{
+				"name": "default-window",
+				"workspacePath": "./",
+				"additionalPanes": [
+					{
+						"name": "default-pane",
+						"command": "echo edit this file or create your own config anywhere and reference that path with -c or --config flag"
+					}
+				]
+			}
+		]
+	}
+}
