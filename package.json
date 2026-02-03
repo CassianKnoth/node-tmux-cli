@@ -5,8 +5,9 @@
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
-		"generate:schema": "rm -rf schema.json && typescript-json-schema tsconfig.json NodeTmuxConfig --topRef --aliasRefs --noExtraProps --required > ./src/config/schema/schema.json",
-		"prebuild": "npm run generate:schema",
+		"schema:generate": "rm -rf schema.json && typescript-json-schema tsconfig.json NodeTmuxConfig --topRef --aliasRefs --noExtraProps --required > ./src/config/schema/schema.json",
+		"schema:validate": "node .github/scripts/validate-schema.js",
+		"prebuild": "npm run schema:generate",
 		"build": "rm -rf dist && tsc && cp -r ./src/config dist/",
 		"start": "node dist/index.js"
 	},

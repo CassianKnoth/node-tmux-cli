@@ -1,4 +1,4 @@
-<!-- # configurable `tmux` with `node.js` CLI
+# configurable `tmux` with `node.js` CLI
 
 Create (or interact with) your `tmux` sessions quick and easy, again and again from one simple config file!
 
@@ -106,4 +106,4 @@ export const configuredSessions: Record<string, Window[]> = {
 		},
 	],
 };
-``` -->
+```
