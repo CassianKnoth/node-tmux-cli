@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 export const DEFAULT_CONFIG_PATH = path.join(
 	__dirname,
-	'../../schema/node-tmux-config.json',
+	'../../config/default/node-tmux-config.json',
 );
 
 export const getConfigPath = (): string => {
