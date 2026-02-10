@@ -6,6 +6,7 @@ import { isTmuxAttached } from '../tmux/is-attached.js';
 export const listConfigurations = () => {
 	const configuredSessionNames = Object.keys(configuredSessions);
 
+	// double space due to emoji consisting of two characters
 	console.log('ℹ️  Available configurations:');
 
 	configuredSessionNames.forEach((configuredSessionName) => {
