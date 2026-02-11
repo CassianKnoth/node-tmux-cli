@@ -11,7 +11,7 @@
 		"node-tmux": "dist/index.js"
 	},
 	"scripts": {
-		"schema:generate": "rm -rf schema.json && typescript-json-schema tsconfig.json NodeTmuxConfig --topRef --aliasRefs --noExtraProps --required > ./src/config/schema/schema.json",
+		"schema:generate": "rm -rf ./src/config/schema/schema.json && typescript-json-schema tsconfig.json NodeTmuxConfig --topRef --aliasRefs --noExtraProps --required > ./src/config/schema/schema.json",
 		"schema:validate": "node .github/scripts/validate-schema.js",
 		"prebuild": "npm run schema:generate",
 		"build": "rm -rf dist && tsc && cp -r ./src/config dist/",

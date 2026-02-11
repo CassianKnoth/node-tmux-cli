@@ -1,5 +1,4 @@
 import schema from '../../dist/config/schema/schema.json' with { type: 'json' };
-
 import templateConfig from '../../dist/config/template/node-tmux-config.json' with { type: 'json' };
 
 import Ajv from 'ajv';
