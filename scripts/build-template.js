@@ -10,7 +10,7 @@ const pkg = JSON.parse(
 
 const VERSION = pkg.version;
 
-const SCHEMA_URL = `https://unpkg.com/node-tmux@${VERSION}/dist/config/schema/schema.json`;
+const SCHEMA_URL = `https://unpkg.com/node-tmux-cli@${VERSION}/dist/config/schema/schema.json`;
 
 const baseTemplatePath = path.join(
 	__dirname,
