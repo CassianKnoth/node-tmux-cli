@@ -1,5 +1,5 @@
 {
-	"$schema": "../schema/schema.json",
+	"$schema": "__SCHEMA_URL__",
 	"shell": "bash",
 	"sessions": {
 		"mySession": [

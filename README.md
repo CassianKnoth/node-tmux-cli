@@ -22,7 +22,7 @@ This project was developed with
 Install the `node-tmux` CLI globally:
 
 ```bash
-npm install -g configurable-tmux-node
+npm install -g node-tmux
 ```
 
 Create a config file:
