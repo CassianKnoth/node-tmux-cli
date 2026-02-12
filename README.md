@@ -85,7 +85,7 @@ You can list any number of `tmux`-session configs under `sessions`. The porperty
 
 If you run the above default config file (e. g. as default config with just `node-tmux` after `node-tmux init`) you will see something like this:
 
-<img src="./assets/config-selection.png">
+<img src="https://raw.githubusercontent.com/CassianKnoth/node-tmux-cli/main/assets/config-selection.png">
 
 If you then provide a valid key, three scenarios are possible:
 
@@ -95,13 +95,13 @@ If you then provide a valid key, three scenarios are possible:
 
 If no session is running, you could start it now:
 
-<img src="./assets/start-session.png">
+<img src="https://raw.githubusercontent.com/CassianKnoth/node-tmux-cli/main/assets/start-session.png">
 
 Every new session starts in _detached_ state.
 
 Now you will have more options to deal with the session:
 
-<img src="./assets/options.png">
+<img src="https://raw.githubusercontent.com/CassianKnoth/node-tmux-cli/main/assets/options.png">
 
 > 💡 Notice how the states will be indicated in the session list already
 
@@ -115,7 +115,7 @@ Now you will have more options to deal with the session:
 
 Let's attach the session and look at the result in `tmux`:
 
-<img src="./assets/tmux.png">
+<img src="https://raw.githubusercontent.com/CassianKnoth/node-tmux-cli/main/assets/tmux.png">
 
 Compare this to the config: You can see that the session consists of one window (see `mySession-myWindow` at the bottom left. You can use or ignore the default window next to it). For `myWindow` two `additionalPanes` were configured, thus the window was split two times, resulting in three panes:
 
@@ -126,7 +126,7 @@ Compare this to the config: You can see that the session consists of one window 
 
 You could actually run the CLI inside the `tmux`-session again:
 
-<img src="./assets/attached.png">
+<img src="https://raw.githubusercontent.com/CassianKnoth/node-tmux-cli/main/assets/attached.png">
 
 The session is now correctly marked as _attached_ and the `[a]ttach` option is gone. This is to help keeping things organized – if the session is attached somewhere already, use that.
 
